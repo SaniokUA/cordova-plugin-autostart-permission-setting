@@ -40,7 +40,7 @@ Open autostart permission window
 
     autoStartPermissionPlugin.openAutostartPermissionPopup();
 
-Woks with:
+Works with:
 
  -  Xiaomi
  -  Oppo

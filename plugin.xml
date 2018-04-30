@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="https://github.com/SaniokUA/cordova-plugin-autostart-permission-setting"
+        id="cordova-plugin-autostart-permission-setting"
+        version="1.0.0">
+
+  <name>AutostartPermission</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <asset src="index.js" target="js/index.js"/>
+
+  <js-module src="index.js" name="AutostartPermission">
+    <clobbers target="AutostartPermission" />
+  </js-module>
+
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="AutostartPermission">
+        <param name="android-package" value="com.rex.plugin.AutostartPermission"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/AutostartPermission.java" target-dir="src/com/rex/plugin/"/>
+  </platform>
+</plugin>

@@ -26,6 +26,7 @@ public class AutostartPermission extends CordovaPlugin {
 
             return true;
         } else {
+
             return false;
         }
     }
@@ -48,9 +49,10 @@ public class AutostartPermission extends CordovaPlugin {
                 intent.setComponent(new ComponentName("com.oneplus.security", "com.oneplus.security.chainlaunch.view.ChainLaunchAppListAct‌​ivity"));
             } else if("asus".equalsIgnoreCase(manufacturer)) {
                 intent.setComponent(new ComponentName("com.asus.mobilemanager", "com.asus.mobilemanager.entry.FunctionActivity")).setData(android.net.Uri.parse("mobilemanager://function/entry/AutoStart"));
-            } else if("samsung".equalsIgnoreCase(manufacturer)) {
-                intent.setComponent(new ComponentName("com.samsung.android.lool", "com.samsung.android.sm.ui.battery.BatteryActivity"));
-            }
+            } 
+//            else if("samsung".equalsIgnoreCase(manufacturer)) {
+//                intent.setComponent(new ComponentName("com.samsung.android.lool", "com.samsung.android.sm.ui.battery.BatteryActivity"));
+//            }
 
             List<ResolveInfo> list = cordova.getActivity().getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
             if  (list.size() > 0) {
